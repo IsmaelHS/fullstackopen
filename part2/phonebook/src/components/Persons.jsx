@@ -12,7 +12,12 @@ const Persons = (props) => {
             )
             .map((person) => <Person key={person.id} person={person} />)
         : props.list.map((person) => (
-            <Person key={person.id} person={person} />
+            <Person
+              key={person.id}
+              person={person}
+              setPersons={props.setPersons}
+              deletePerson={props.deletePerson}
+            />
           ))}
     </div>
   );
